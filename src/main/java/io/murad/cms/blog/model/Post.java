@@ -1,5 +1,6 @@
 package io.murad.cms.blog.model;
-
+import io.murad.cms.blog.model.Category;
+import io.murad.cms.blog.model.Topic;
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
