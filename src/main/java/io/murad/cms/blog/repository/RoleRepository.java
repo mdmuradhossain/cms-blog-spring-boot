@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import io.murad.cms.blog.model.Role;
 
-@Repository
 public interface RoleRepository extends JpaRepository<Role, Long> {
 
 }

@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 
 import io.murad.cms.blog.model.User;
 
-@Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
 	Optional<User> findByUserName(String userName);

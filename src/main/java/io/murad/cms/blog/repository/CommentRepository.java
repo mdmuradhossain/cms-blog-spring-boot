@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import io.murad.cms.blog.model.Comment;
 
-@Repository
 public interface CommentRepository extends JpaRepository<Comment, Long>{
 
 }

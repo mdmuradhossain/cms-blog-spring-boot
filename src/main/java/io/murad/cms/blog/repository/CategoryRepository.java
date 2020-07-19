@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import io.murad.cms.blog.model.Category;
 
-@Repository
+
 public interface CategoryRepository extends JpaRepository<Category, Long>{
 
 }

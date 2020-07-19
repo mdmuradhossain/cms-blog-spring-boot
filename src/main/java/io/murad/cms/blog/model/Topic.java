@@ -22,6 +22,6 @@ public class Topic {
 	@Column(name = "topic")
 	private String topic;
 	
-	@ManyToMany(mappedBy = "topics")
+	@ManyToMany(targetEntity = Post.class,mappedBy = "topics")
     private List<Post> posts;
 }

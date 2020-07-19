@@ -34,9 +34,9 @@ public class Comment {
 	private String description;
 	
 	@Column(name = "commented_at")
-	private LocalDateTime cammentedAt;
+	private LocalDateTime commentedAt;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "post_comment")
+	@JoinColumn(name = "post_id", referencedColumnName = "post_id")
 	private Post post;
 }

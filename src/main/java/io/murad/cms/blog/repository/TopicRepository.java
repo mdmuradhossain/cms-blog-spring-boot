@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import io.murad.cms.blog.model.Topic;
 
-@Repository
 public interface TopicRepository extends JpaRepository<Topic, Long>{
 
 }
