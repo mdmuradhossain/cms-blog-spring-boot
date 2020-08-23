@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/layout}"
+	xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments/layout.html :: headerfiles">
+<meta charset="ISO-8859-1">
+<title></title>
+</head>
+<body>
+	<header th:insert="fragments/adminTopNav::topNav"> </header>
+	<div class="container-fluid" layout:fragment="content">
+		<div class="row">
+
+			<div class="col-md-4">
+				<nav th:insert="fragments/adminSideNav::sideNav"></nav>
+			</div>
+			<div class="col-md-8">
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">Id</th>
+							<th scope="col">Title</th>
+							<th scope="col">Image</th>
+							<th scope="col">Topic</th>
+							<th scope="col">Category</th>
+							<th scope="col">Content</th>
+							<th scope="col">Edit</th>
+							<th scope="col">Delete</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="post : ${posts}">
+							<td th:text="${post.id}"></td>
+							<td th:text="${post.title}"></td>
+							<td th:text="${post.content}"></td>
+							<td th:each="category : ${post.category}"><p th:text="${category.categoryName}"></p></td>
+							<td><a href="" class="btn btn-info">Edit</a></td>
+							<td><a href="" class="btn btn-danger">Delete</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
