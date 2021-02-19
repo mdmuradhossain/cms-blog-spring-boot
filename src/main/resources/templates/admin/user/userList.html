@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/layout}"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments/layout.html :: headerfiles">
+    <meta charset="ISO-8859-1">
+    <title></title>
+</head>
+<body>
+<header th:insert="fragments/adminTopNav::topNav"> </header>
+<div class="container-fluid" layout:fragment="content">
+    <div class="row">
+
+        <div class="col-md-4">
+            <nav th:insert="fragments/adminSideNav::sideNav"></nav>
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Username</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="user : ${users}">
+                    <td th:text="${user.id}"></td>
+                    <td th:text="${user.fullName}"></td>
+                    <td th:text="${user.email}"></td>
+                    <td th:text="${user.userName}"></td>
+                    <td><a href="" class="btn btn-info">Edit</a></td>
+                    <td><a href="" class="btn btn-danger">Delete</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
